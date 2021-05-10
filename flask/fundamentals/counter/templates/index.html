@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+<style>
+    .btn {
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <div class="container d-flex flex-column" style="text-align: center; margin: 100px;align-items: center;">
+        <h1>Counter</h1>
+        <h2 style="font-weight: normal; padding-top: 200px;">{{session['counter']}} times.</h2>
+        <div class="d-flex">
+            <form action="/plustwo" style="padding-right: 5px;">
+                <button class="btn" style="font-weight:bold; background-color: lightgreen;">+ 2</button>
+            </form>
+            <form action="/destroy_session">
+                <button class="btn" style="font-weight:bold; background-color: rgb(233, 58, 58);">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
