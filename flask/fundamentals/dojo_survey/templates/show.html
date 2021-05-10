@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</head>
+<style>
+    h4 {
+        font-weight: normal;
+    }
+</style>
+<body>
+    <div class="container border border-dark" style="width: 50%;margin-top: 100px; padding: 30px">
+        <form action="/" method="GET">
+            <h3 style="font-weight: bold;text-decoration: underline;margin-bottom: 10px;">Submitted Info</h3>
+            <div class="d-flex justify-content-between">
+                <h4>Name:</h4>
+                <h4>{{name}}</h4>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h4>Location:</h4>
+                <h4>{{locations}}</h4>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h4>Favorite Language:</h4>
+                <h4>{{languages}}</h4>
+            </div>
+            <div>
+                <h4>Comment:</h4>
+                <h4 style="font-size: 1.2rem;">{{comment}}</h4>
+            </div>
+            <div class="d-flex justify-content-end" style="margin-top: 5px;">
+                <button value="dojo_result" style="background-color: teal; color: white;font-size: 1.2rem; border: 2px solid black; box-shadow: 2px 2px black;">Go Back</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
