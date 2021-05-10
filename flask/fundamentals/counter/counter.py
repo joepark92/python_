@@ -4,17 +4,22 @@ app.secret_key = "dojocounter"
 
 @app.route("/")
 def counter():
-    session['counter'] = 0
+    # session['counter'] = 0
     if 'counter' in session:
         print("KEY EXIST")
+        session['counter'] += 1
     else:
         print("key 'count' does NOT exist")
-    return redirect("/count")
-
-@app.route("/count")
-def show_page():
-    session['counter'] += 1
+        session['counter'] = 0
     return render_template("index.html")
+
+# @app.route("/count")
+# def show_page():
+#     if 'counter' in session:
+#         session['counter'] += 1
+#     else:
+#         session['counter'] = 0
+#     return render_template("index.html")
 
 @app.route("/destroy_session")
 def destroy_session():
