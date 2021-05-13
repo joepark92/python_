@@ -1,6 +1,5 @@
 from logging import debug
 from flask import Flask, render_template, redirect, request
-from flask.helpers import url_for
 
 
 from mysqlconnection import connectToMySQL
@@ -13,7 +12,7 @@ app.secret_key = "mojodojo"
 
 @app.route("/")
 def redirectroute():
-    return redirect(url_for('index'))
+    return redirect("/users")
 
 # READ Many
 @app.route("/users")
