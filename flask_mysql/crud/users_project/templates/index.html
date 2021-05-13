@@ -25,6 +25,7 @@
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Created At</th>
+                <th style="width: 150px;">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +35,11 @@
                 <td>{{ user['first_name'] + " " + user['last_name']}}</td>
                 <td>{{ user['email']}}</td>
                 <td>{{ user['created_at']}}</td>
+                <td class="d-flex justify-content-between" style="width: 150px;">
+                    <a href="/users/{{ user['id']}}">Show</a><p>|</p>
+                    <a href="/users/{{ user['id'] }}/edit">Edit</a><p>|</p>
+                    <a href="/users/{{ user['id'] }}/delete">Delete</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
