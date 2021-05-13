@@ -43,14 +43,14 @@ class User:
 
         return user_id
 
-    #UPDATE
-    @classmethod
-    def edit_user_form(cls, data):
-        query = "SELECT * FROM users WHERE id = %(id)s;"
+    # #UPDATE
+    # @classmethod
+    # def edit_user_form(cls, data):
+    #     query = "SELECT * FROM users WHERE id = %(id)s;"
 
-        user_id = connectToMySQL("users_schema").query_db(query, data)
+    #     user_id = connectToMySQL("users_schema").query_db(query, data)
 
-        return cls(user_id[0])
+    #     return cls(user_id[0])
     
     @classmethod
     def update_user(cls, data):
