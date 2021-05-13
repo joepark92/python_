@@ -9,6 +9,7 @@ class User:
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
+    #READ MANY
     @classmethod
     def get_all_users(cls):
         query = "SELECT * FROM users;"
@@ -22,6 +23,7 @@ class User:
 
         return users
 
+    #READ ONE
     @classmethod
     def get_one_user(cls, data):
         query = "SELECT * FROM users WHERE id = %(id)s;"
@@ -31,6 +33,7 @@ class User:
 
         return user_obj
 
+    #CREATE
     @classmethod
     def create(cls, data):
         query = "INSERT INTO users (first_name, last_name, email, created_at, updated_at) " \
@@ -40,6 +43,7 @@ class User:
 
         return user_id
 
+    #UPDATE
     @classmethod
     def edit_user_form(cls, data):
         query = "SELECT * FROM users WHERE id = %(id)s;"
@@ -57,6 +61,7 @@ class User:
 
         return user_id
 
+    #DELETE
     @classmethod
     def delete_user(cls, data):
         query = "DELETE FROM users WHERE id = %(id)s"
