@@ -46,7 +46,7 @@ def edit_user_form(user_id):
         "id": user_id
     }
 
-    user_list = User.edit_user_form(data)
+    user_list = User.get_one_user(data)
 
     return render_template("edit.html", user = user_list)
 
