@@ -40,3 +40,17 @@ mysql/queries/mysql_connection_errors.txt
 fundamentals/fundamentals/notes/w2d4.js
 mysql/ERD/dojos_and_ninjas.mwb.bak
 mysql/ERD/books_query.sql
+fundamentals/fundamentals/notes/w2d5.js
+flask_mysql/validation/books_validation/flask_app/config/mysqlconnection.py
+flask_mysql/validation/books_validation/Pipfile
+flask_mysql/validation/books_validation/Pipfile.lock
+flask_mysql/validation/books_validation/server.py
+flask_mysql/validation/books_validation/flask_app/__init__.py
+flask_mysql/validation/books_validation/flask_app/controllers/author_controller.py
+flask_mysql/validation/books_validation/flask_app/controllers/book_controller.py
+flask_mysql/validation/books_validation/flask_app/models/author.py
+flask_mysql/validation/books_validation/flask_app/models/book.py
+flask_mysql/validation/books_validation/flask_app/templates/author_detail.html
+flask_mysql/validation/books_validation/flask_app/templates/author.html
+flask_mysql/validation/books_validation/flask_app/templates/book_detail.html
+flask_mysql/validation/books_validation/flask_app/templates/book.html
