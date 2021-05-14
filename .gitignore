@@ -64,3 +64,4 @@ flask_mysql/crud/books/flask_app/config/mysqlconnection.py
 flask_mysql/crud/dojos_and_ninjas/flask_app/config/mysqlconnection.py
 flask_mysql/crud/users_modularized/flask_app/config/mysqlconnection.py
 flask_mysql/crud/users_project/mysqlconnection.py
+bfg.jar
