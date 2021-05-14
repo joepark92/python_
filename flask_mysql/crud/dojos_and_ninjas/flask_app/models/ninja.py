@@ -29,11 +29,3 @@ class Ninja:
         remove_ninja = connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)
 
         return remove_ninja
-
-    # @classmethod
-    # def grab_dojo_id(cls, data):
-    #     query = "SELECT dojo_id FROM ninjas WHERE id = %(id)s"
-
-    #     results = connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)
-
-    #     return results
