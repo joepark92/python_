@@ -54,3 +54,13 @@ flask_mysql/validation/books_validation/flask_app/templates/author_detail.html
 flask_mysql/validation/books_validation/flask_app/templates/author.html
 flask_mysql/validation/books_validation/flask_app/templates/book_detail.html
 flask_mysql/validation/books_validation/flask_app/templates/book.html
+flask_mysql/crud/books/flask_app/config/mysqlconnection.py
+flask_mysql/crud/dojos_and_ninjas/flask_app/config/mysqlconnection.py
+flask_mysql/crud/books/flask_app/config/mysqlconnection.py
+flask_mysql/crud/users_project/mysqlconnection.py
+flask_mysql/crud/users_modularized/flask_app/config/mysqlconnection.py
+flask_mysql/crud/dojos_and_ninjas/flask_app/config/mysqlconnection.py
+flask_mysql/crud/books/flask_app/config/mysqlconnection.py
+flask_mysql/crud/dojos_and_ninjas/flask_app/config/mysqlconnection.py
+flask_mysql/crud/users_modularized/flask_app/config/mysqlconnection.py
+flask_mysql/crud/users_project/mysqlconnection.py
