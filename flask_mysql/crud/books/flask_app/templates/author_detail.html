@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+<style>
+    h1 {
+        margin-bottom: 50px;
+    }
+    .table {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: auto;
+    }
+</style>
+<body>
+    <div class="container d-flex justify-content-between" style="margin-top: 50px;width: 70%;">
+        <div>
+            <h1>{{ author.name }}'s favorites</h1>
+            <table class="table table-striped table-bordered thead-light">
+                <thead class="thead-dark" style="background-color: rgb(167, 162, 162);">
+                    <tr>
+                        <th>Title</th>
+                        <th># of pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in author.books %}
+                    <tr>
+                        <!-- {% if book.title != None %} -->
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.num_of_pages }}</td>
+                        <!-- {% endif %} -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/">Home</a>
+        </div>
+        <div>
+            <h1>Add Author's Favorite</h1>
+            <form style="display: flex;" action="/authors/{{ author.id }}/add_book" method="post">
+                <p>Book: </p>
+                <div class="d-flex flex-column" style="justify-content: left; margin-left: 120px;">
+                    <select name="book_id" id="">
+                        {% for book in all_books %}
+                        <option value="{{ book.id }}">{{ book.title }}</option>
+                        {% endfor %}
+                    </select>
+                    <button style="margin-top: 30px; width: 90px; background-color: white; border: 2px solid black; box-shadow: 3px 3px black;">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
