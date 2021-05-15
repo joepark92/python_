@@ -68,3 +68,5 @@ bfg.jar
 flask_mysql/validation/dojo_survey_validation/flask_app/models/dojo_survey.py
 flask_mysql/validation/dojo_survey_validation/flask_app/config/mysqlconnection.py
 mysql/ERD/dojo_survey.mwb
+flask_mysql/validation/email_validation/flask_app/config/mysqlconnection.py
+mysql/ERD/email_validation.mwb
