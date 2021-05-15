@@ -48,4 +48,8 @@ def delete(email_id):
     }
     Email.delete(data)
 
+    for x in Email.email_list():
+        print(x['id'])
+        return redirect(f"/success/{x['id']}")
+        
     return redirect("/")
