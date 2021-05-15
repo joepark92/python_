@@ -65,3 +65,6 @@ flask_mysql/crud/dojos_and_ninjas/flask_app/config/mysqlconnection.py
 flask_mysql/crud/users_modularized/flask_app/config/mysqlconnection.py
 flask_mysql/crud/users_project/mysqlconnection.py
 bfg.jar
+flask_mysql/validation/dojo_survey_validation/flask_app/models/dojo_survey.py
+flask_mysql/validation/dojo_survey_validation/flask_app/config/mysqlconnection.py
+mysql/ERD/dojo_survey.mwb
