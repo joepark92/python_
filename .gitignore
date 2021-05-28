@@ -116,3 +116,8 @@ flask_mysql/python_belt_exam/flask_app/templates/dashboard.html
 flask_mysql/python_belt_exam/flask_app/templates/display_show.html
 flask_mysql/python_belt_exam/flask_app/templates/edit_show.html
 flask_mysql/python_belt_exam/flask_app/templates/new_show.html
+flask_mysql/python_project/flask_app/config/mysqlconnection.py
+fundamentals/fundamentals/notes/w3d4.js
+fundamentals/fundamentals/notes/w3d5.js
+mysql/ERD/cars.mwb
+mysql/ERD/cars.mwb.bak
