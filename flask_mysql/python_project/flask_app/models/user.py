@@ -81,33 +81,33 @@ class User:
             is_valid = False
 
         if len(post_data['last_name']) < 2:
-            flash("Last Name must have more than 1 character.", "flash1")
+            flash("Last Name must have more than 1 character.", "flash2")
             is_valid = False
 
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         if not EMAIL_REGEX.match(post_data['email']):
-            flash("Invalid email address!", "flash1")
+            flash("Invalid email address!", "flash3")
             is_valid = False
         else:
             user = User.get_user_email({"email": post_data['email']})
             if user:
-                flash("This email is already in use. Please enter a different email address.", "flash1")
+                flash("This email is already in use. Please enter a different email address.", "flash3")
                 is_valid = False
 
         if len(post_data['password']) < 5:
-            flash("Password must have at least 5 characters.", "flash1")
+            flash("Password must have at least 5 characters.", "flash4")
             is_valid = False
         
         if not re.search(r'\d', post_data['password']):
-            flash("Password must contain at least one Uppercase and one Number", "flash1")
+            flash("Password must contain at least one Uppercase and one Number", "flash4")
             is_valid = False
 
         if not re.match(r'\w*[A-Z]\w*', post_data['password']):
-            flash("Password must contain at least one Uppercase and one Number", "flash1")
+            flash("Password must contain at least one Uppercase and one Number", "flash4")
             is_valid = False
 
         if post_data['password'] != post_data['confirm_password']:
-            flash("Password does not match Confirm Password.", "flash1")
+            flash("Password does not match Confirm Password.", "flash5")
             is_valid = False
 
         return is_valid
@@ -118,11 +118,11 @@ class User:
         user = User.get_user_email({"email": post_data['email']})
 
         if not user:
-            flash("Invalid Credentials", 'flash2')
+            flash("Invalid Credentials", 'flash6')
             return False
         
         if not bcrypt.check_password_hash(user.password, post_data['password']):
-            flash("Invalid Credentials", 'flash2')
+            flash("Invalid Credentials", 'flash6')
             return False
         
         return True

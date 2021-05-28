@@ -37,14 +37,36 @@
                         <td>{{ car['color'] }}</td>
                         <td style="width: 200px;display: flex;">
                             <a class="btn btn-sm btn-primary" style="margin-right: 10px" href="/cars/{{ car.id }}">View</a>
-                            <form action="/cars/{{car.id}}/add" method="POST">
+                            <!-- <form action="/cars/{{car.id}}/add" method="POST">
+                                {% set dict = {'found': False} %}
+                                {% for item in user.cars %}
+                                    {% if car.id == item.id %}
+                                        {% if dict.update({'found': True}) %} {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if dict['found'] %}
+                                <p class="btn-sm btn-secondary">Added!</p>
+                                {% else %}
                                 <button class="btn btn-sm btn-primary">Add to Fav</button>
-                            </form>
+                                {% endif %}
+                            </form> -->
+                            {% set dict = {'found': False} %}
+                            {% for item in user.cars %}
+                                {% if car.id == item.id %}
+                                    {% if dict.update({'found': True}) %} {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if dict['found'] %}
+                                <a href="/cars/{{car.id}}/unadd"class="btn btn-sm btn-danger">Remove</a>
+                            {% else %}
+                                <a href="/cars/{{car.id}}/add" class="btn btn-sm btn-success" method="GET">Add to Fav</a>
+                            {% endif %}
                         </td>
                     </tr>
                     {% endfor%}
                 </tbody>
             </table>
+            <a class="w-80 btn btn-small btn-warning" style="margin-left: 90%;" href="/dashboard">Back</a>
         </div>
     </div>
 </body>

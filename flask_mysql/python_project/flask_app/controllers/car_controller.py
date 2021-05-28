@@ -42,7 +42,7 @@ def display_car(car_id):
     )
 
 
-@app.route("/cars/<int:car_id>/add", methods = ['POST'])
+@app.route("/cars/<int:car_id>/add", methods = ['GET'])
 def add_car_to_fav(car_id):
     data = {
         "user_id": session['uuid'],
@@ -50,7 +50,7 @@ def add_car_to_fav(car_id):
     }
     Car.add_car(data)
 
-    return redirect("/dashboard")
+    return redirect("/cars")
 
 
 @app.route("/cars/<int:car_id>/remove")
@@ -62,3 +62,14 @@ def rem_car_from_fav(car_id):
     Car.remove_car(data)
 
     return redirect("/dashboard")
+
+
+@app.route("/cars/<int:car_id>/unadd")
+def rem_car_from_fav2(car_id):
+    data = {
+        "user_id": session['uuid'],
+        "car_id": car_id
+    }
+    Car.remove_car(data)
+
+    return redirect("/cars")

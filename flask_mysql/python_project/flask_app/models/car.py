@@ -48,6 +48,29 @@ class Car:
         return car
 
 
+    # @classmethod
+    # def car_info(cls, data):
+    #     query = "SELECT * FROM cars LEFT JOIN favorites ON cars.id = favorites.car_id " \
+    #         "LEFT JOIN users ON users.id = favorites.user_id WHERE users.id = %(id)s;"
+    #     results = connectToMySQL("cars_project_schema").query_db(query, data)
+
+    #     car = cls(results[0])
+
+    #     for row in results:
+    #         data = {
+    #             "id": row['users.id'],
+    #             "first_name": row['first_name'],
+    #             "last_name": row['last_name'],
+    #             "email": row['email'],
+    #             "password": row['password'],
+    #             "created_at": row['users.created_at'],
+    #             "updated_at": row['users.updated_at']
+    #         }
+    #         car.users.append(user.User(data))
+        
+    #     return car
+
+
     @classmethod
     def add_car(cls, data):
         query = "INSERT INTO favorites (user_id, car_id) " \
@@ -65,7 +88,7 @@ class Car:
     def count(cls, data):
         query = "SELECT COUNT(user_id) FROM favorites WHERE car_id = %(car_id)s;"
         results = connectToMySQL("cars_project_schema").query_db(query, data)
-        
-        count = results
+        print(results)
+        count = results[0]['COUNT(user_id)']
 
         return count
